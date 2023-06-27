@@ -1,7 +1,7 @@
 const Home = () => {
     return (  
         <div className="home">
-            <h2>Homepage</h2>
+            <img src="https://cms.nhl.bamgrid.com/images/photos/319846256/1024x576/cut.jpg" className="img-fluid d-block" />
         </div>
     );
 }
