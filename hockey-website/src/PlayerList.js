@@ -18,7 +18,7 @@ const PlayerList = (props) => {
         <table className="table">
             <thead>
                 <tr>
-                    <th scope="col">Name</th>
+                    <th style={{width: '300px'}}scope="col">Name</th>
                     <th scope="col">#</th>
                     <th scope="col">Position</th>
                     <th scope="col">Team</th>

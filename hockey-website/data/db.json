@@ -31,6 +31,16 @@
             "PTS": 108
         },
         {
+            "Name": "St. Louis Blues",
+            "Conference": "Western",
+            "Division": "Central",
+            "GP": 82,
+            "W": 37,
+            "L": 38,
+            "OTL": 7,
+            "PTS": 81
+        },
+        {
             "Name": "Vegas Golden Knights",
             "Conference": "Western",
             "Division": "Pacific",
@@ -39,6 +49,16 @@
             "L": 22,
             "OTL": 9,
             "PTS": 111
+        },
+        {
+            "Name": "Boston Bruins",
+            "Conference": "Eastern",
+            "Division": "Atlantic",
+            "GP": 82,
+            "W": 65,
+            "L": 12,
+            "OTL": 5,
+            "PTS": 135
         }
     ],
     "Players": [

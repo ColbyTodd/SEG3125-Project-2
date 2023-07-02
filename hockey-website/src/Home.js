@@ -6,6 +6,8 @@ import Standings from "./Standings";
 const Home = () => {
     const [Metro, setMetro] = useState(null);
     const [Atl, setAtl] = useState(null);
+    const [Cent, setCent] = useState(null);
+    const [Pac, setPac] = useState(null);
 
     useEffect(() => {
         fetch("http://localhost:8000/Teams")
@@ -13,18 +15,24 @@ const Home = () => {
                 return res.json()
             })
             .then((data) => {
+                data.sort((a, b) => b.PTS - a.PTS);
                 setMetro(data.filter((data) => data.Division === 'Metropolitan'));
                 setAtl(data.filter((data) => data.Division === 'Atlantic'));
+                setCent(data.filter((data) => data.Division === 'Central'));
+                setPac(data.filter((data) => data.Division === 'Pacific'));
             })
     }, []);
 
     return (  
         <div className="home">
-            <img src="https://cms.nhl.bamgrid.com/images/photos/319846256/1024x576/cut.jpg" className="img-fluid d-block" />
-            <HotPlayers />
-            <h2>Eastern</h2>
+            <h1 className='text-center py-5'>The Hockey Stick.com</h1>
+            <HotPlayers/>
+            <h2 className='text-center pt-5'>Eastern Conference</h2>
             {Metro && <Standings teams={Metro}/>}
             {Atl && <Standings teams={Atl}/>}
+            <h2 className='text-center pt-5'>Western Conference</h2>
+            {Cent && <Standings teams={Cent}/>}
+            {Pac && <Standings teams={Pac}/>}
         </div>
     );
 }
