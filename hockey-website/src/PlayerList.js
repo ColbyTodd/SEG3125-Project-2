@@ -2,24 +2,26 @@ const PlayerList = (props) => {
     const players = props.players;
 
     return (  
-        <div className="playerList">
+        <table className="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Team</th>
+                    <th scope="col">Points</th>
+                </tr>
+            </thead>
             {players.map((player) => (
-                <div className="row" key={player.Name}>
-                    <div className="col">
-                        <img src=""></img>
-                    </div>
-                    <div className="col">
-                        <p>{ player.Name }</p>
-                    </div>
-                    <div className="col">
-                        <p>{ player.Team }</p>
-                    </div>
-                    <div className="col">
-                        <p>{ player.Points}</p>
-                    </div>
-                </div>
-            ))}
-        </div>
+                <tbody key={player.Name}>
+                    <tr>
+                        <th scope="row">{player.Number}</th>
+                        <td>{player.Name}</td>
+                        <td>{player.Team}</td>
+                        <td>{player.Points}</td>
+                    </tr>
+                </tbody>
+            ))}  
+        </table>
     );
 }
  
