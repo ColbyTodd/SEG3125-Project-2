@@ -1,4 +1,15 @@
 const HotPlayers = () => {
+    const [players, setPlayers] = useState(null);
+
+    useEffect(() => {
+        fetch("http://localhost:8000/Players")
+            .then(res => {
+                return res.json()
+            })
+            .then((data) => {
+                setPlayers(data);
+            })
+    }, []);
     return (  
         <div className="container-sm">
             <div className="row">

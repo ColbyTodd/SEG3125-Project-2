@@ -45,5 +45,25 @@
             }
             
         }
-    }
+    },
+    "Players": [
+        {
+            "Name": "Adam Fox",
+            "Number": 23,
+            "Points": 72,
+            "Goals": 12,
+            "Assists": 60,
+            "Nationality": "American",
+            "Position": "D"
+        },
+        {
+            "Name": "Dylan Larkin",
+            "Number": 71,
+            "Points": 79,
+            "Goals": 32,
+            "Assists": 47,
+            "Nationality": "American",
+            "Position": "C"
+        }
+    ]
 }
