@@ -1,5 +1,6 @@
 import Home from './Home';
 import Navbar from './Navbar';
+import Player from './Player';
 import Search from './Search'
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
@@ -15,6 +16,9 @@ function App() {
               </Route>
               <Route path="/search">
                 <Search />
+              </Route>
+              <Route path="/player/:name">
+                <Player />
               </Route>
             </Switch>
           </div>

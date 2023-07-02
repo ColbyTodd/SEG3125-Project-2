@@ -11,8 +11,7 @@ const Search = () => {
                 return res.json()
             })
             .then((data) => {
-                data.sort((a, b) => b.Points - a.Points);
-                setPlayers(data.slice(0, 5));
+                setPlayers(data);
             })
     }, []);
 
@@ -37,7 +36,7 @@ const Search = () => {
             </div>
             <div className="row">
                 <div className="col">
-                        <select class="form-select" aria-label="Default select example">
+                        <select className="form-select" aria-label="Default select example">
                             <option selected>Open this select menu</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
@@ -45,7 +44,7 @@ const Search = () => {
                         </select>
                 </div>
                 <div className="col">
-                    <select class="form-select" aria-label="Default select example">
+                    <select className="form-select" aria-label="Default select example">
                         <option selected>Open this select menu</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -53,7 +52,7 @@ const Search = () => {
                     </select>
                 </div>
                 <div className="col">
-                    <select class="form-select" aria-label="Default select example">
+                    <select className="form-select" aria-label="Default select example">
                         <option selected>Open this select menu</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -61,7 +60,7 @@ const Search = () => {
                     </select>
                 </div>
                 <div className="col">
-                    <select class="form-select" aria-label="Default select example">
+                    <select className="form-select" aria-label="Default select example">
                         <option selected>Open this select menu</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -69,12 +68,17 @@ const Search = () => {
                     </select>
                 </div>
                 <div className="col">
-                    <select class="form-select" aria-label="Default select example">
+                    <select className="form-select" aria-label="Default select example">
                         <option selected>Open this select menu</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
                     </select>
+                </div>
+            </div>
+            <div className="row">
+                <div className="col text-center">
+                    <button className="button">Search</button>
                 </div>
             </div>
             <div className="row">

@@ -1,5 +1,13 @@
+import { useHistory } from 'react-router-dom';
+
 const PlayerList = (props) => {
     const players = props.players;
+    const history = useHistory();
+
+  const handleRowClick = (rowId) => {
+    // Programmatically navigate to the desired URL
+    history.push(`/player/${rowId}`);
+  };
 
     return (  
         <table className="table">
@@ -14,13 +22,13 @@ const PlayerList = (props) => {
             </thead>
             {players.map((player, index) => (
                 <tbody key={index}>
-                    <tr>
-                        <th scope="row">{player.Name}</th>
-                        <td>{player.Number}</td>
-                        <td>{player.Position}</td>
-                        <td>{player.Team}</td>
-                        <td>{player.Points}</td>
-                    </tr>
+                        <tr onClick={() => handleRowClick(player.Name)}>
+                            <th scope="row">{player.Name}</th>
+                            <td>{player.Number}</td>
+                            <td>{player.Position}</td>
+                            <td>{player.Team}</td>
+                            <td>{player.Points}</td>
+                        </tr>
                 </tbody>
             ))}  
         </table>

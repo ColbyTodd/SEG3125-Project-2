@@ -9,7 +9,7 @@ const Navbar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
-                    <a className="nav-item nav-link active" href="/">Home </a>
+                    <a className="nav-item nav-link" href="/">Home</a>
                     <a className="nav-item nav-link" href="/search">Search</a>
                 </div>
             </div>
