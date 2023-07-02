@@ -3,11 +3,21 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import DisplayPlayer from "./DisplayPlayer";
+import Chatbox from "./Chatbox";
 
 const Player = () => {
     const [player, setPlayer] = useState(null);
     const { name } = useParams();
     const history = useHistory();
+    const [showModal, setShowModal] = useState(false);
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
+
+    const handleOpenModal = () => {
+        setShowModal(true);
+    };
 
     const compareClick = () => {
         // Programmatically navigate to the desired URL
@@ -32,9 +42,11 @@ const Player = () => {
                     <button className="button" onClick={() => compareClick()}>Compare</button>
                 </div>
                 <div className="col">
-                    <button className="button">Chat</button>
+                    <button className="button" onClick={handleOpenModal}>Chat</button>
                 </div>
             </div>
+
+            <Chatbox show={showModal} handleClose={handleCloseModal} name={name}/>
         </div>
     );
 }
