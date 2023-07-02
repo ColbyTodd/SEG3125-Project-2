@@ -11,7 +11,8 @@ const HotPlayers = () => {
                 return res.json()
             })
             .then((data) => {
-                setPlayers(data);
+                data.sort((a, b) => b.Points - a.Points);
+                setPlayers(data.slice(0, 5));
             })
     }, []);
     return (  

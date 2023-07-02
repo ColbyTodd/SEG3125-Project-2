@@ -11,8 +11,8 @@ const PlayerList = (props) => {
                     <th scope="col">Points</th>
                 </tr>
             </thead>
-            {players.map((player) => (
-                <tbody key={player.Name}>
+            {players.map((player, index) => (
+                <tbody key={index}>
                     <tr>
                         <th scope="row">{player.Number}</th>
                         <td>{player.Name}</td>
