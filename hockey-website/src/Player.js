@@ -1,12 +1,18 @@
 import PlayerList from "./PlayerList";
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import DisplayPlayer from "./DisplayPlayer";
 
 const Player = () => {
     const [player, setPlayer] = useState(null);
     const { name } = useParams();
+    const history = useHistory();
+
+    const compareClick = () => {
+        // Programmatically navigate to the desired URL
+            history.push(`/search/${name}`);
+      };
 
     useEffect(() => {
         fetch("http://localhost:8000/Players")
@@ -23,7 +29,7 @@ const Player = () => {
             {player && <DisplayPlayer player={player}/>}
             <div className="row text-center">
                 <div className="col">
-                    <button className="button">Compare</button>
+                    <button className="button" onClick={() => compareClick()}>Compare</button>
                 </div>
                 <div className="col">
                     <button className="button">Chat</button>
