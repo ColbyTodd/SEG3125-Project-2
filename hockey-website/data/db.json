@@ -19,7 +19,27 @@
             "L": 37,
             "OTL": 10,
             "PTS": 80
-        }   
+        },
+        {
+            "Name": "Dallas Stars",
+            "Conference": "Western",
+            "Division": "Central",
+            "GP": 82,
+            "W": 47,
+            "L": 21,
+            "OTL": 14,
+            "PTS": 108
+        },
+        {
+            "Name": "Vegas Golden Knights",
+            "Conference": "Western",
+            "Division": "Pacific",
+            "GP": 82,
+            "W": 51,
+            "L": 22,
+            "OTL": 9,
+            "PTS": 111
+        }
     ],
     "Players": [
         {
