@@ -6,15 +6,16 @@ import { useParams } from 'react-router-dom';
 const Player = () => {
     const [player, setPlayer] = useState(null);
     const { name } = useParams();
-    console.log(name);
 
     useEffect(() => {
+        name.replace("%20", " ")
+        console.log(name)
         fetch("http://localhost:8000/Players")
             .then(res => {
                 return res.json()
             })
             .then((data) => {
-                setPlayer(data.slice(0, 5));
+                setPlayer(data.filter((data) => data.Name === name));
             })
     }, []);
 
