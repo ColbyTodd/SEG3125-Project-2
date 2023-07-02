@@ -1,3 +1,5 @@
+import Navbar from "./Navbar";
+
 const Search = () => {
     return (  
     <div className="App">
