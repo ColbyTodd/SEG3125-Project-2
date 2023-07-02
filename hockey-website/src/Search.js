@@ -5,7 +5,22 @@ import { useParams } from 'react-router-dom';
 
 const Search = () => {
     const [players, setPlayers] = useState(null);
+    const [filter, setFilter] = useState(null);
     const {compare} = useParams();
+    const [pos, setPos] = useState("")
+
+    const posChange = (event) => {
+        setPos(event.target.value);
+      };
+
+    const searchClick = () => {
+        setFilter(players);
+        if (pos !== ''){
+            setFilter(filter.filter((filter) => filter.Position === pos))
+        }
+        console.log(filter);
+
+    };
 
     useEffect(() => {
         fetch("http://localhost:8000/Players")
@@ -17,12 +32,14 @@ const Search = () => {
                     setPlayers(data.filter((data) => data.Name !== compare))
                 } else{
                     setPlayers(data);
+                    setFilter(data);
                 }
             })
-    }, []);
+    }, []); 
 
     return (  
         <div className="container-sm">
+            <h1 className='text-center py-5'>Find a player</h1>
             <div className="row">
                 <div className="col">
                     <h4>Position</h4>
@@ -42,16 +59,17 @@ const Search = () => {
             </div>
             <div className="row">
                 <div className="col">
-                        <select className="form-select" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                        <select className="form-select" value={pos} onChange={posChange}>
+                            <option selected value=''>---</option>
+                            <option value="C">C</option>
+                            <option value="RW">RW</option>
+                            <option value="LW">LW</option>
+                            <option value="D">D</option>
                         </select>
                 </div>
                 <div className="col">
                     <select className="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
+                    <option selected>---</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
@@ -59,7 +77,7 @@ const Search = () => {
                 </div>
                 <div className="col">
                     <select className="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
+                    <option selected>---</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
@@ -67,7 +85,7 @@ const Search = () => {
                 </div>
                 <div className="col">
                     <select className="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
+                    <option selected>---</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
@@ -75,7 +93,7 @@ const Search = () => {
                 </div>
                 <div className="col">
                     <select className="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
+                    <option selected>---</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
@@ -84,12 +102,12 @@ const Search = () => {
             </div>
             <div className="row">
                 <div className="col text-center">
-                    <button className="button">Search</button>
+                    <button className="button" onClick={searchClick}>Search</button>
                 </div>
             </div>
             <div className="row">
                 <h2>Players</h2>
-                {players && <PlayerList players={players} compare={compare}/>}
+                {filter && <PlayerList players={filter} compare={compare}/>}
             </div>
             
         </div>

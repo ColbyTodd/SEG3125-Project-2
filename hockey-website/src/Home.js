@@ -25,7 +25,7 @@ const Home = () => {
 
     return (  
         <div className="home">
-            <h1 className='text-center py-5'>The Hockey Stick.com</h1>
+            <h1 className='text-center py-5'>The Hockey Stats.com</h1>
             <HotPlayers/>
             <h2 className='text-center pt-5'>Eastern Conference</h2>
             {Metro && <Standings teams={Metro}/>}
