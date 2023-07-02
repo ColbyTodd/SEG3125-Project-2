@@ -5,7 +5,6 @@ const Standings = (props) => {
         <div className="container">
             {teams.map((team, index) => (
                 <div key={index}>
-                    <h2>{team.Conference}</h2>
                     <table className="table">
                         <thead>
                                 <tr>

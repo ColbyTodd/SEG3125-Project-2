@@ -4,7 +4,8 @@ import HotPlayers from "./HotPlayers";
 import Standings from "./Standings";
 
 const Home = () => {
-    const [teams, setTeams] = useState(null);
+    const [Metro, setMetro] = useState(null);
+    const [Atl, setAtl] = useState(null);
 
     useEffect(() => {
         fetch("http://localhost:8000/Teams")
@@ -12,7 +13,8 @@ const Home = () => {
                 return res.json()
             })
             .then((data) => {
-                setTeams(data);
+                setMetro(data.filter((data) => data.Division === 'Metropolitan'));
+                setAtl(data.filter((data) => data.Division === 'Atlantic'));
             })
     }, []);
 
@@ -20,7 +22,9 @@ const Home = () => {
         <div className="home">
             <img src="https://cms.nhl.bamgrid.com/images/photos/319846256/1024x576/cut.jpg" className="img-fluid d-block" />
             <HotPlayers />
-            {teams && <Standings teams={teams}/>}
+            <h2>Eastern</h2>
+            {Metro && <Standings teams={Metro}/>}
+            {Atl && <Standings teams={Atl}/>}
         </div>
     );
 }
