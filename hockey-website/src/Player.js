@@ -2,6 +2,7 @@ import PlayerList from "./PlayerList";
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import DisplayPlayer from "./DisplayPlayer";
 
 const Player = () => {
     const [player, setPlayer] = useState(null);
@@ -19,31 +20,8 @@ const Player = () => {
     }, []);
 
     return (  
-        <div className="container">
-            <h1 className="text-center">{player.Name}</h1>
-            <div className="row">
-                <table className="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Position</th>
-                            <th scope="col">Goals</th>
-                            <th scope="col">Assists</th>
-                            <th scope="col">Points</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                            <tr>
-                                <td>{player.Position}</td>
-                                <td>{player.Goals}</td>
-                                <td>{player.Assists}</td>
-                                <td>{player.Points}</td>
-                            </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div className="row">
-
-            </div>
+        <div>
+            {player && <DisplayPlayer player={player}/>}
         </div>
     );
 }
