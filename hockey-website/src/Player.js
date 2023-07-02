@@ -9,7 +9,6 @@ const Player = () => {
     const { name } = useParams();
 
     useEffect(() => {
-        name.replace("%20", " ")
         fetch("http://localhost:8000/Players")
             .then(res => {
                 return res.json()
@@ -22,6 +21,14 @@ const Player = () => {
     return (  
         <div>
             {player && <DisplayPlayer player={player}/>}
+            <div className="row text-center">
+                <div className="col">
+                    <button className="button">Compare</button>
+                </div>
+                <div className="col">
+                    <button className="button">Chat</button>
+                </div>
+            </div>
         </div>
     );
 }

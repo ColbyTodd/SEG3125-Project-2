@@ -1,3 +1,4 @@
+import Compare from './Compare';
 import Home from './Home';
 import Navbar from './Navbar';
 import Player from './Player';
@@ -19,6 +20,9 @@ function App() {
               </Route>
               <Route path="/player/:name">
                 <Player />
+              </Route>
+              <Route path="/compare/:names">
+                <Compare />
               </Route>
             </Switch>
           </div>
