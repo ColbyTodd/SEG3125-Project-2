@@ -1,18 +1,8 @@
 {
-    "NHL": {
+    "Teams": {
         "Eastern": {
             "Metropolitan": {
                 "New York Rangers": {
-                    "Players": [
-                    {
-                        "Name": "Adam Fox",
-                        "Number": 23,
-                        "Points": 72,
-                        "Goals": 12,
-                        "Assists": 60,
-                        "Nationality": "American",
-                        "Position": "D"
-                    }],
                     "Stats": {
                         "GP": 82,
                         "W": 47,
@@ -24,16 +14,6 @@
             },
             "Atlantic": {
                 "Detroit Red Wings": {
-                    "Players": [
-                    {
-                        "Name": "Dylan Larkin",
-                        "Number": 71,
-                        "Points": 79,
-                        "Goals": 32,
-                        "Assists": 47,
-                        "Nationality": "American",
-                        "Position": "C"
-                    }],
                     "Stats": {
                         "GP": 82,
                         "W": 35,
@@ -54,7 +34,8 @@
             "Goals": 12,
             "Assists": 60,
             "Nationality": "American",
-            "Position": "D"
+            "Position": "D",
+            "Team": "New York Rangers"
         },
         {
             "Name": "Dylan Larkin",
@@ -63,7 +44,8 @@
             "Goals": 32,
             "Assists": 47,
             "Nationality": "American",
-            "Position": "C"
+            "Position": "C",
+            "Team": "Detroit Red Wings"
         }
     ]
 }
