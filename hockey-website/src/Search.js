@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
 import PlayerList from './PlayerList';
+import { useParams } from 'react-router-dom';
 
 const Search = () => {
     const [players, setPlayers] = useState(null);
+    const {compare} = useParams();
 
     useEffect(() => {
         fetch("http://localhost:8000/Players")
@@ -11,7 +13,11 @@ const Search = () => {
                 return res.json()
             })
             .then((data) => {
-                setPlayers(data);
+                if (compare){
+                    setPlayers(data.filter((data) => data.Name !== compare))
+                } else{
+                    setPlayers(data);
+                }
             })
     }, []);
 
@@ -83,7 +89,7 @@ const Search = () => {
             </div>
             <div className="row">
                 <h2>Players</h2>
-                {players && <PlayerList players={players}/>}
+                {players && <PlayerList players={players} compare={compare}/>}
             </div>
             
         </div>

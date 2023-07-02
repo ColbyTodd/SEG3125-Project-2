@@ -15,6 +15,9 @@ function App() {
               <Route exact path="/">
                 <Home />
               </Route>
+              <Route path="/search/:compare">
+                <Search />
+              </Route>
               <Route path="/search">
                 <Search />
               </Route>

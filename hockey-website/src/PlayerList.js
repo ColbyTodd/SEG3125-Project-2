@@ -2,11 +2,16 @@ import { useHistory } from 'react-router-dom';
 
 const PlayerList = (props) => {
     const players = props.players;
+    const compare = props.compare;
     const history = useHistory();
 
   const handleRowClick = (rowId) => {
     // Programmatically navigate to the desired URL
-    history.push(`/player/${rowId}`);
+    if (compare){
+        history.push(`/compare/${compare}_${rowId}`)
+    } else{
+        history.push(`/player/${rowId}`);
+    }
   };
 
     return (  
