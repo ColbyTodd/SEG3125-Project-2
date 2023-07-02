@@ -10,11 +10,11 @@ function App() {
         <Navbar />
           <div className="content">
             <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
               <Route path="/search">
                 <Search />
-              </Route>
-              <Route path="/">
-                <Home />
               </Route>
             </Switch>
           </div>
