@@ -1,19 +1,21 @@
 const HotPlayers = () => {
     return (  
-        <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">
-            <div className="carousel-inner">
-                <div className="carousel-item active">
-                    <img className="d-block w-100" src="https://www.hockeydb.com/ihdb/photos/dylan-larkin-2019-34.jpg" alt="First slide" />
-                    <div className="carousel-caption d-none d-md-block">
-                        <h5>Dylan Larkin</h5>
-                        <p>Detroit Red Wings</p>
-                    </div>
+        <div className="container-sm">
+            <div className="row">
+                <h2>Point Leaders</h2>
+            </div>
+            <div className="row">
+                <div className="col">
+                    <img src=""></img>
                 </div>
-                <div className="carousel-item">
-                    <img className="d-block w-100" src="..." alt="Second slide" />
+                <div className="col">
+                    <p>Player Name</p>
                 </div>
-                <div className="carousel-item">
-                    <img className="d-block w-100" src="..." alt="Third slide" />
+                <div className="col">
+                    <p>Team Name</p>
+                </div>
+                <div className="col">
+                    <p>Points</p>
                 </div>
             </div>
         </div>
