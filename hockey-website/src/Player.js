@@ -9,21 +9,37 @@ const Player = () => {
 
     useEffect(() => {
         name.replace("%20", " ")
-        console.log(name)
         fetch("http://localhost:8000/Players")
             .then(res => {
                 return res.json()
             })
             .then((data) => {
-                setPlayer(data.filter((data) => data.Name === name));
+                setPlayer(data.filter((data) => data.Name === name)[0]);
             })
     }, []);
 
     return (  
-        
         <div className="container">
+            <h1 className="text-center">{player.Name}</h1>
             <div className="row">
-                {player && <PlayerList players={player} />}
+                <table className="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Position</th>
+                            <th scope="col">Goals</th>
+                            <th scope="col">Assists</th>
+                            <th scope="col">Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td>{player.Position}</td>
+                                <td>{player.Goals}</td>
+                                <td>{player.Assists}</td>
+                                <td>{player.Points}</td>
+                            </tr>
+                    </tbody>
+                </table>
             </div>
             <div className="row">
 
