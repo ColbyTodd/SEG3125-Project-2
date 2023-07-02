@@ -1,31 +1,26 @@
 {
-    "Teams": {
-        "Eastern": {
-            "Metropolitan": {
-                "New York Rangers": {
-                    "Stats": {
-                        "GP": 82,
-                        "W": 47,
-                        "L": 22,
-                        "OTL": 13,
-                        "PTS": 107
-                    }
-                }   
-            },
-            "Atlantic": {
-                "Detroit Red Wings": {
-                    "Stats": {
-                        "GP": 82,
-                        "W": 35,
-                        "L": 37,
-                        "OTL": 10,
-                        "PTS": 80
-                    }
-                }   
-            }
-            
-        }
-    },
+    "Teams": [
+        {
+            "Name": "New York Rangers",
+            "Conference": "Eastern",
+            "Division": "Metropolitan",
+            "GP": 82,
+            "W": 47,
+            "L": 22,
+            "OTL": 13,
+            "PTS": 107
+        },
+        {
+            "Name": "Detroit Red Wings",
+            "Conference": "Eastern",
+            "Division": "Atlantic",
+            "GP": 82,
+            "W": 35,
+            "L": 37,
+            "OTL": 10,
+            "PTS": 80
+        }   
+    ],
     "Players": [
         {
             "Name": "Adam Fox",
