@@ -6,19 +6,46 @@ import { useParams } from 'react-router-dom';
 const Search = () => {
     const [players, setPlayers] = useState(null);
     const [filter, setFilter] = useState(null);
+    const [teams, setTeams] = useState(null);
     const {compare} = useParams();
-    const [pos, setPos] = useState("")
+    const [pos, setPos] = useState('');
+    const [con, setCon] = useState('');
+    const [div, setDiv] = useState('');
+    const [teamSel, setTeam] = useState('');
 
     const posChange = (event) => {
         setPos(event.target.value);
       };
 
+    const conChange = (event) => {
+        setCon(event.target.value);
+      };
+
+      const divChange = (event) => {
+        setDiv(event.target.value);
+      };
+    
+      const teamChange = (event) => {
+        setTeam(event.target.value);
+      }; 
+
     const searchClick = () => {
-        setFilter(players);
+        var query = players;
+        
         if (pos !== ''){
-            setFilter(filter.filter((filter) => filter.Position === pos))
+            query = query.filter((filter) => filter.Position === pos)
         }
-        console.log(filter);
+        if (con !== ''){
+           query = query.filter((filter) => filter.Conference === con)
+        }
+        if (div !== ''){
+            query = query.filter((filter) => filter.Division === div)
+        }
+        if (teamSel !== ''){
+            query = query.filter((filter) => filter.Team === teamSel)
+        }
+
+        setFilter(query);
 
     };
 
@@ -35,6 +62,14 @@ const Search = () => {
                     setFilter(data);
                 }
             })
+        
+            fetch("http://localhost:8000/Teams")
+                .then(res => {
+                return res.json()
+                })
+                .then((data) => {
+                    setTeams(data);
+                })
     }, []); 
 
     return (  
@@ -68,27 +103,27 @@ const Search = () => {
                         </select>
                 </div>
                 <div className="col">
-                    <select className="form-select" aria-label="Default select example">
-                    <option selected>---</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <select className="form-select" value={con} onChange={conChange}>
+                    <option selected value=''>---</option>
+                        <option value="Eastern">Eastern</option>
+                        <option value="Western">Western</option>
                     </select>
                 </div>
                 <div className="col">
-                    <select className="form-select" aria-label="Default select example">
-                    <option selected>---</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <select className="form-select" value={div} onChange={divChange}>
+                    <option selected value =''>---</option>
+                        <option value="Metropolitan">Metropolitan</option>
+                        <option value="Atlantic">Atlantic</option>
+                        <option value="Central">Central</option>
+                        <option value="Pacific">Pacific</option>
                     </select>
                 </div>
                 <div className="col">
-                    <select className="form-select" aria-label="Default select example">
-                    <option selected>---</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <select className="form-select" value={teamSel} onChange={teamChange}>
+                        <option selected value=''>---</option>
+                        {teams && teams.map((team) => (
+                            <option key={team.Name}>{team.Name}</option>
+                        ))}  
                     </select>
                 </div>
                 <div className="col">

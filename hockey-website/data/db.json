@@ -70,7 +70,9 @@
             "Assists": 60,
             "Nationality": "American",
             "Position": "D",
-            "Team": "New York Rangers"
+            "Team": "New York Rangers",
+            "Conference": "Eastern",
+            "Division": "Metropolitan"
         },
         {
             "Name": "Dylan Larkin",
@@ -80,7 +82,9 @@
             "Assists": 47,
             "Nationality": "American",
             "Position": "C",
-            "Team": "Detroit Red Wings"
+            "Team": "Detroit Red Wings",
+            "Conference": "Eastern",
+            "Division": "Atlantic"
         }
     ]
 }
