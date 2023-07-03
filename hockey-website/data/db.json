@@ -85,6 +85,18 @@
             "Team": "Detroit Red Wings",
             "Conference": "Eastern",
             "Division": "Atlantic"
+        },
+        {
+            "Name": "Nathan Mackinnon",
+            "Number": 29,
+            "Points": 111,
+            "Goals": 42,
+            "Assists": 69,
+            "Nationality": "Canadian",
+            "Position": "C",
+            "Team": "Colorado Avalanche",
+            "Conference": "Western",
+            "Division": "Central"
         }
     ]
 }

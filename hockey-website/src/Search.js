@@ -12,6 +12,7 @@ const Search = () => {
     const [con, setCon] = useState('');
     const [div, setDiv] = useState('');
     const [teamSel, setTeam] = useState('');
+    const [nationality, setNationality] = useState('');
 
     const posChange = (event) => {
         setPos(event.target.value);
@@ -29,6 +30,10 @@ const Search = () => {
         setTeam(event.target.value);
       }; 
 
+      const nationalityChange = (event) => {
+        setNationality(event.target.value);
+      }; 
+
     const searchClick = () => {
         var query = players;
         
@@ -44,10 +49,20 @@ const Search = () => {
         if (teamSel !== ''){
             query = query.filter((filter) => filter.Team === teamSel)
         }
-
+        if (nationality !== ''){
+            query = query.filter((filter) => filter.Nationality === nationality)
+        }
+        console.log(nationality);
         setFilter(query);
 
     };
+
+    const uniqueNationalities = players && players.reduce((uniqueList, item) => {
+        if (!uniqueList.includes(item.Nationality)) {
+          uniqueList.push(item.Nationality);
+        }
+        return uniqueList;
+      }, []);
 
     useEffect(() => {
         fetch("http://localhost:8000/Players")
@@ -127,11 +142,11 @@ const Search = () => {
                     </select>
                 </div>
                 <div className="col">
-                    <select className="form-select" aria-label="Default select example">
-                    <option selected>---</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <select className="form-select" value={nationality} onChange={nationalityChange}>
+                    <option selected value=''>---</option>
+                        {uniqueNationalities && uniqueNationalities.map((nationality) => (
+                            <option key={nationality}>{nationality}</option>
+                        ))}  
                     </select>
                 </div>
             </div>
