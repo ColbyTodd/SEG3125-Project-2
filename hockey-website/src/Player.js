@@ -1,4 +1,3 @@
-import PlayerList from "./PlayerList";
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
