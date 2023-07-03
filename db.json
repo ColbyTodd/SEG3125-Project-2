@@ -1,0 +1,148 @@
+{
+    "Teams": [
+        {
+            "Name": "New York Rangers",
+            "Conference": "Eastern",
+            "Division": "Metropolitan",
+            "GP": 82,
+            "W": 47,
+            "L": 22,
+            "OTL": 13,
+            "PTS": 107
+        },
+        {
+            "Name": "Detroit Red Wings",
+            "Conference": "Eastern",
+            "Division": "Atlantic",
+            "GP": 82,
+            "W": 35,
+            "L": 37,
+            "OTL": 10,
+            "PTS": 80
+        },
+        {
+            "Name": "Dallas Stars",
+            "Conference": "Western",
+            "Division": "Central",
+            "GP": 82,
+            "W": 47,
+            "L": 21,
+            "OTL": 14,
+            "PTS": 108
+        },
+        {
+            "Name": "St. Louis Blues",
+            "Conference": "Western",
+            "Division": "Central",
+            "GP": 82,
+            "W": 37,
+            "L": 38,
+            "OTL": 7,
+            "PTS": 81
+        },
+        {
+            "Name": "Vegas Golden Knights",
+            "Conference": "Western",
+            "Division": "Pacific",
+            "GP": 82,
+            "W": 51,
+            "L": 22,
+            "OTL": 9,
+            "PTS": 111
+        },
+        {
+            "Name": "Boston Bruins",
+            "Conference": "Eastern",
+            "Division": "Atlantic",
+            "GP": 82,
+            "W": 65,
+            "L": 12,
+            "OTL": 5,
+            "PTS": 135
+        },
+        {
+            "Name": "Colorado Avalanche",
+            "Conference": "Western",
+            "Division": "Central",
+            "GP": 82,
+            "W": 51,
+            "L": 24,
+            "OTL": 7,
+            "PTS": 109
+        }
+    ],
+    "Players": [
+        {
+            "Name": "Adam Fox",
+            "Number": 23,
+            "Points": 72,
+            "Goals": 12,
+            "Assists": 60,
+            "Nationality": "American",
+            "Position": "D",
+            "Team": "New York Rangers",
+            "Conference": "Eastern",
+            "Division": "Metropolitan"
+        },
+        {
+            "Name": "Dylan Larkin",
+            "Number": 71,
+            "Points": 79,
+            "Goals": 32,
+            "Assists": 47,
+            "Nationality": "American",
+            "Position": "C",
+            "Team": "Detroit Red Wings",
+            "Conference": "Eastern",
+            "Division": "Atlantic"
+        },
+        {
+            "Name": "Nathan Mackinnon",
+            "Number": 29,
+            "Points": 111,
+            "Goals": 42,
+            "Assists": 69,
+            "Nationality": "Canadian",
+            "Position": "C",
+            "Team": "Colorado Avalanche",
+            "Conference": "Western",
+            "Division": "Central"
+        },
+        {
+            "Name": "William Karlsson",
+            "Number": 71,
+            "Points": 53,
+            "Goals": 14,
+            "Assists": 39,
+            "Nationality": "Swedish",
+            "Position": "C",
+            "Team": "Vegas Golden Knights",
+            "Conference": "Western",
+            "Division": "Pacific"
+        },
+        {
+            "Name": "Mason Marchment",
+            "Number": 27,
+            "Points": 31,
+            "Goals": 12,
+            "Assists": 19,
+            "Nationality": "Canadian",
+            "Position": "LW",
+            "Team": "Dallas Stars",
+            "Conference": "Western",
+            "Division": "Central"
+        },
+        {
+            "Name": "David Pastrnak",
+            "Number": 88,
+            "Points": 113,
+            "Goals": 61,
+            "Assists": 52,
+            "Nationality": "Czech",
+            "Position": "RW",
+            "Team": "Boston Bruins",
+            "Conference": "Eastern",
+            "Division": "Atlantic"
+        }
+    ]
+}
