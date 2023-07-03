@@ -59,6 +59,16 @@
             "L": 12,
             "OTL": 5,
             "PTS": 135
+        },
+        {
+            "Name": "Colorado Avalanche",
+            "Conference": "Western",
+            "Division": "Central",
+            "GP": 82,
+            "W": 51,
+            "L": 24,
+            "OTL": 7,
+            "PTS": 109
         }
     ],
     "Players": [
@@ -97,6 +107,42 @@
             "Team": "Colorado Avalanche",
             "Conference": "Western",
             "Division": "Central"
+        },
+        {
+            "Name": "William Karlsson",
+            "Number": 71,
+            "Points": 53,
+            "Goals": 14,
+            "Assists": 39,
+            "Nationality": "Swedish",
+            "Position": "C",
+            "Team": "Vegas Golden Knights",
+            "Conference": "Western",
+            "Division": "Pacific"
+        },
+        {
+            "Name": "Mason Marchment",
+            "Number": 27,
+            "Points": 31,
+            "Goals": 12,
+            "Assists": 19,
+            "Nationality": "Canadian",
+            "Position": "LW",
+            "Team": "Dallas Stars",
+            "Conference": "Western",
+            "Division": "Central"
+        },
+        {
+            "Name": "David Pastrnak",
+            "Number": 88,
+            "Points": 113,
+            "Goals": 61,
+            "Assists": 52,
+            "Nationality": "Czech",
+            "Position": "RW",
+            "Team": "Boston Bruins",
+            "Conference": "Eastern",
+            "Division": "Atlantic"
         }
     ]
 }

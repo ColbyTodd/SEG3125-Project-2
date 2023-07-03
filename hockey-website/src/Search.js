@@ -74,8 +74,10 @@ const Search = () => {
                     setPlayers(data.filter((data) => data.Name !== compare))
                 } else{
                     setPlayers(data);
-                    setFilter(data);
                 }
+                setFilter(players);
+                console.log(filter);
+                
             })
         
             fetch("http://localhost:8000/Teams")
