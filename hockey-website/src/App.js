@@ -13,8 +13,8 @@ function App() {
           <div className="content">
             <Switch>
               <Route exact path={`/`} render={ (routerProps) => < Home routerProps={routerProps} />} />
+              <Route exact path={`/search`} render={ (routerProps) => < Search routerProps={routerProps} />} />
               <Route path={`/search/:compare`} render={ (routerProps) => < Search routerProps={routerProps} />} />
-              <Route path={`/search`} render={ (routerProps) => < Search routerProps={routerProps} />} />
               <Route path={`/player/:name`} render={ (routerProps) => < Player routerProps={routerProps} />} />
               <Route path={`/compare/:names`} render={ (routerProps) => < Compare routerProps={routerProps} />} />
             </Switch>
