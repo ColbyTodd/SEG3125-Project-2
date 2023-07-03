@@ -1,6 +1,6 @@
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand navbar-dark bg-dark">
             <a className="navbar-brand" href={process.env.PUBLIC_URL + '/'}>
                 <img src="https://previews.123rf.com/images/sergeymastepanov/sergeymastepanov1703/sergeymastepanov170300020/73493596-ice-hockey-logo-vector.jpg" width="30" height="30" className="d-inline-block align-top" alt=""/>
             </a>
