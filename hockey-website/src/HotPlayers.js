@@ -6,7 +6,7 @@ const HotPlayers = () => {
     const [players, setPlayers] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost:8000/Players")
+        fetch("https://my-json-server.typicode.com/ColbyTodd/SEG3125-Project-2/Players")
             .then(res => {
                 return res.json()
             })

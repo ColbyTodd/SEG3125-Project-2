@@ -65,7 +65,7 @@ const Search = () => {
       }, []);
 
     useEffect(() => {
-        fetch("http://localhost:8000/Players")
+        fetch("https://my-json-server.typicode.com/ColbyTodd/SEG3125-Project-2/Players")
             .then(res => {
                 return res.json()
             })
@@ -80,7 +80,7 @@ const Search = () => {
                 
             })
         
-            fetch("http://localhost:8000/Teams")
+            fetch("https://my-json-server.typicode.com/ColbyTodd/SEG3125-Project-2/Teams")
                 .then(res => {
                 return res.json()
                 })
