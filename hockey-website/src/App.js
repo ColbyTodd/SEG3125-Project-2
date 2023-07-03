@@ -3,7 +3,7 @@ import Home from './Home';
 import Navbar from './Navbar';
 import Player from './Player';
 import Search from './Search'
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { HashRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
