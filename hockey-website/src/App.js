@@ -12,21 +12,11 @@ function App() {
         <Navbar />
           <div className="content">
             <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route path="/search/:compare">
-                <Search />
-              </Route>
-              <Route path="/search">
-                <Search />
-              </Route>
-              <Route path="/player/:name">
-                <Player />
-              </Route>
-              <Route path="/compare/:names">
-                <Compare />
-              </Route>
+              <Route exact path={`/`} render={ (routerProps) => < Home routerProps={routerProps} />} />
+              <Route path={`/search/:compare`} render={ (routerProps) => < Search routerProps={routerProps} />} />
+              <Route exact path={`/search/`} render={ (routerProps) => < Search routerProps={routerProps} />} />
+              <Route exact path={`/player/:name`} render={ (routerProps) => < Player routerProps={routerProps} />} />
+              <Route exact path={`/compare/:names`} render={ (routerProps) => < Compare routerProps={routerProps} />} />
             </Switch>
           </div>
       </div>
