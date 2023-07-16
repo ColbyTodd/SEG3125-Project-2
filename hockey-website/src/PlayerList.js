@@ -27,7 +27,7 @@ const PlayerList = (props) => {
             </thead>
             {players.map((player, index) => (
                 <tbody key={index}>
-                        <tr onClick={() => handleRowClick(player.Name)}>
+                        <tr onClick={() => handleRowClick(player.Name)} className="playerLink">
                             <th scope="row">{player.Name}</th>
                             <td>{player.Number}</td>
                             <td>{player.Position}</td>

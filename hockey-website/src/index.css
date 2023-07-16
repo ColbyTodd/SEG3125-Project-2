@@ -35,3 +35,7 @@ footer {
   flex-shrink: 0;
   height: 60px; /* Adjust the height as needed */
 }
+
+.playerLink :hover{
+  cursor: pointer;
+}
