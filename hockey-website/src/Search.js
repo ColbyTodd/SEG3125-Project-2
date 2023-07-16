@@ -52,7 +52,7 @@ const Search = () => {
         if (nationality !== ''){
             query = query.filter((filter) => filter.Nationality === nationality)
         }
-        console.log(nationality);
+        console.log(query);
         setFilter(query);
 
     };
@@ -76,6 +76,7 @@ const Search = () => {
                     setPlayers(data);
                 }
                 setFilter(players);
+                console.log(players);
                 console.log(filter);
                 
             })

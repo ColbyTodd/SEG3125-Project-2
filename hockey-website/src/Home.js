@@ -27,12 +27,22 @@ const Home = () => {
         <div className="home">
             <h1 className='text-center py-5'>The Hockey Stats.com</h1>
             <HotPlayers/>
-            <h2 className='text-center pt-5'>Eastern Conference</h2>
-            {Metro && <Standings teams={Metro}/>}
-            {Atl && <Standings teams={Atl}/>}
-            <h2 className='text-center pt-5'>Western Conference</h2>
-            {Cent && <Standings teams={Cent}/>}
-            {Pac && <Standings teams={Pac}/>}
+            <h2 className='text-center pt-5 pb-1'>NHL Standings</h2>
+            <div className="container-sm">
+                <div className="row">
+                    <div className="col">
+                        <h2 className='text-center'>Eastern Conference</h2>
+                        {Metro && <Standings teams={Metro}/>}
+                        {Atl && <Standings teams={Atl}/>}
+                    </div>
+                    <div className="col">
+                        <h2 className='text-center'>Western Conference</h2>
+                        {Cent && <Standings teams={Cent}/>}
+                        {Pac && <Standings teams={Pac}/>}
+                    </div>
+                </div>
+                
+            </div>
         </div>
     );
 }
