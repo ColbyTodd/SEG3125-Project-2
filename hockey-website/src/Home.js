@@ -31,12 +31,12 @@ const Home = () => {
             <div className="container-sm">
                 <div className="row">
                     <div className="col">
-                        <h2 className='text-center'>Eastern Conference</h2>
+                        <h3 className='text-center'>Eastern Conference</h3>
                         {Metro && <Standings teams={Metro}/>}
                         {Atl && <Standings teams={Atl}/>}
                     </div>
                     <div className="col">
-                        <h2 className='text-center'>Western Conference</h2>
+                        <h3 className='text-center'>Western Conference</h3>
                         {Cent && <Standings teams={Cent}/>}
                         {Pac && <Standings teams={Pac}/>}
                     </div>

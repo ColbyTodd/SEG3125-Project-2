@@ -18,7 +18,7 @@ const HotPlayers = () => {
     return (  
         <div className="container-sm">
             <div className="row">
-                <h2 className="text-center">Current NHL Point Leaders</h2>
+                <h3 className="text-center">NHL Point Leaders</h3>
                 {players && <PlayerList players={players}/>}
             </div>
             
