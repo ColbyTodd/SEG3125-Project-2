@@ -1,4 +1,5 @@
 import Compare from './Compare';
+import Footer from './Footer';
 import Home from './Home';
 import Navbar from './Navbar';
 import Player from './Player';
@@ -17,8 +18,10 @@ function App() {
               <Route path={`/search/:compare`} render={ (routerProps) => < Search routerProps={routerProps} />} />
               <Route path={`/player/:name`} render={ (routerProps) => < Player routerProps={routerProps} />} />
               <Route path={`/compare/:names`} render={ (routerProps) => < Compare routerProps={routerProps} />} />
+              <Route path={``} render={ (routerProps) => < Home routerProps={routerProps} />} />
             </Switch>
           </div>
+        <Footer />
       </div>
     </Router>
   );
