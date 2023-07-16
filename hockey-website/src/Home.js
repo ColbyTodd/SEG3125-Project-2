@@ -26,16 +26,25 @@ const Home = () => {
     return (  
         <div className="home">
             <h1 className='text-center py-5'>The Hockey Stats.com</h1>
-            <HotPlayers/>
-            <h2 className='text-center pt-5 pb-1'>NHL Standings</h2>
             <div className="container-sm">
                 <div className="row">
+                    <h3 className="text-center pb-2">NHL Point Leaders</h3>
+                </div>
+                <div className="row bordered p-2">
                     <div className="col">
-                        <h3 className='text-center'>Eastern Conference</h3>
-                        {Metro && <Standings teams={Metro}/>}
-                        {Atl && <Standings teams={Atl}/>}
+                        <HotPlayers/>
                     </div>
-                    <div className="col">
+                </div>
+                <div className="row">
+                    <h2 className='text-center pt-5 pb-2'>NHL Standings</h2>
+                </div>
+                <div className="row bordered p-2">
+                    <div className="col p-2">
+                        <h3 className='text-center'>Eastern Conference</h3>
+                        {Atl && <Standings teams={Atl}/>}
+                        {Metro && <Standings teams={Metro}/>}
+                    </div>
+                    <div className="col p-2">
                         <h3 className='text-center'>Western Conference</h3>
                         {Cent && <Standings teams={Cent}/>}
                         {Pac && <Standings teams={Pac}/>}

@@ -16,13 +16,13 @@ const HotPlayers = () => {
             })
     }, []);
     return (  
-        <div className="container-sm">
-            <div className="row">
-                <h3 className="text-center">NHL Point Leaders</h3>
-                {players && <PlayerList players={players}/>}
+        <div>
+            <div className="container-sm">
+                <div className="col p-2">
+                    {players && <PlayerList players={players}/>}
+                </div>
             </div>
-            
-        </div>
+        </div> 
     );
 }
  

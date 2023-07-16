@@ -52,7 +52,6 @@ const Search = () => {
         if (nationality !== ''){
             query = query.filter((filter) => filter.Nationality === nationality)
         }
-        console.log(query);
         setFilter(query);
 
     };
