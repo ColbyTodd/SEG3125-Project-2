@@ -21,7 +21,9 @@ function App() {
               <Route path={``} render={ (routerProps) => < Home routerProps={routerProps} />} />
             </Switch>
           </div>
-        <Footer />
+          <div className="footer">
+            <Footer />
+          </div>
       </div>
     </Router>
   );
