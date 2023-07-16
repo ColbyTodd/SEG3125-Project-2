@@ -69,6 +69,16 @@
             "L": 24,
             "OTL": 7,
             "PTS": 109
+        },
+        {
+            "Name": "Toronto Maple Leafs",
+            "Conference": "Eastern",
+            "Division": "Atlantic",
+            "GP": 82,
+            "W": 50,
+            "L": 21,
+            "OTL": 11,
+            "PTS": 111
         }
     ],
     "Players": [
