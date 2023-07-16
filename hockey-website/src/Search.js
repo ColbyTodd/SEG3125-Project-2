@@ -52,6 +52,11 @@ const Search = () => {
         if (nationality !== ''){
             query = query.filter((filter) => filter.Nationality === nationality)
         }
+        
+        if (query.length == 0){
+            query = [{Name: "Player not found"}]
+        }
+
         setFilter(query);
 
     };
@@ -80,13 +85,13 @@ const Search = () => {
                 
             })
         
-            fetch("https://my-json-server.typicode.com/ColbyTodd/SEG3125-Project-2/Teams")
-                .then(res => {
-                return res.json()
-                })
-                .then((data) => {
-                    setTeams(data);
-                })
+        fetch("https://my-json-server.typicode.com/ColbyTodd/SEG3125-Project-2/Teams")
+            .then(res => {
+            return res.json()
+            })
+            .then((data) => {
+                setTeams(data);
+            })
     }, []); 
 
     return (  
@@ -153,7 +158,7 @@ const Search = () => {
                 </div>
             </div>
             <div className="row">
-                <div className="col text-center">
+                <div className="col text-center pt-3">
                     <button className="button" onClick={searchClick}>Search</button>
                 </div>
             </div>
