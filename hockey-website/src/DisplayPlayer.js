@@ -1,6 +1,20 @@
+import { useState } from 'react';
+import { useEffect } from 'react';
+
 const DisplayPlayer = (props) => {
     const player = props.player;
-    const teamImage = props.teamImage;
+    const [teamImage, setTeamImage] = useState(null);
+
+    useEffect(() => {
+        fetch("https://my-json-server.typicode.com/ColbyTodd/SEG3125-Project-2/Teams")
+            .then(res => {
+                return res.json()
+            })
+            .then((data) => {
+                setTeamImage(data.filter((data) => data.Name === player.Team)[0].Image);
+            })
+}, []);
+    
     return (
         <div className="container">
             <h1 className="text-center">{player.Name}</h1>
@@ -31,7 +45,7 @@ const DisplayPlayer = (props) => {
                     </table>
                 </div>
                 <div className="col-2 text-center">
-                    <img className="img-fluid" src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Detroit_Red_Wings_logo.svg/1200px-Detroit_Red_Wings_logo.svg.png"/>
+                    {teamImage && <img className="img-fluid" src={teamImage}/>}
                 </div>
             </div>
         </div>

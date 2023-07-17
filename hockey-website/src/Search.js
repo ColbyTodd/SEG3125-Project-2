@@ -55,7 +55,7 @@ const Search = () => {
             query = query.filter((filter) => filter.Nationality === nationality)
         }
         
-        if (query.length == 0){
+        if (query.length === 0){
             query = [{Name: "Player not found"}]
         }
 
