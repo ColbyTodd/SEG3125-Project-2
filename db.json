@@ -92,7 +92,8 @@
             "Position": "D",
             "Team": "New York Rangers",
             "Conference": "Eastern",
-            "Division": "Metropolitan"
+            "Division": "Metropolitan",
+            "Image": "https://www.hockeydb.com/ihdb/photos/adam-fox-2020-48.jpg"
         },
         {
             "Name": "Dylan Larkin",
@@ -104,7 +105,8 @@
             "Position": "C",
             "Team": "Detroit Red Wings",
             "Conference": "Eastern",
-            "Division": "Atlantic"
+            "Division": "Atlantic",
+            "Image": "https://www.hockeydb.com/ihdb/photos/adam-fox-2020-48.jpg"
         },
         {
             "Name": "Nathan Mackinnon",
@@ -116,7 +118,8 @@
             "Position": "C",
             "Team": "Colorado Avalanche",
             "Conference": "Western",
-            "Division": "Central"
+            "Division": "Central",
+            "Image": "https://www.hockeydb.com/ihdb/photos/adam-fox-2020-48.jpg"
         },
         {
             "Name": "William Karlsson",
@@ -128,7 +131,8 @@
             "Position": "C",
             "Team": "Vegas Golden Knights",
             "Conference": "Western",
-            "Division": "Pacific"
+            "Division": "Pacific",
+            "Image": "https://www.hockeydb.com/ihdb/photos/adam-fox-2020-48.jpg"
         },
         {
             "Name": "Mason Marchment",
@@ -140,7 +144,8 @@
             "Position": "LW",
             "Team": "Dallas Stars",
             "Conference": "Western",
-            "Division": "Central"
+            "Division": "Central",
+            "Image": "https://www.hockeydb.com/ihdb/photos/adam-fox-2020-48.jpg"
         },
         {
             "Name": "David Pastrnak",
@@ -152,7 +157,8 @@
             "Position": "RW",
             "Team": "Boston Bruins",
             "Conference": "Eastern",
-            "Division": "Atlantic"
+            "Division": "Atlantic",
+            "Image": "https://www.hockeydb.com/ihdb/photos/adam-fox-2020-48.jpg"
         }
     ]
 }

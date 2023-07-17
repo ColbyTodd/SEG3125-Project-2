@@ -34,14 +34,21 @@ const Player = () => {
     }, []);
 
     return (  
-        <div>
-            {player && <DisplayPlayer player={player}/>}
+        <div className='container-sm'>
+            <div className="row">
+                <div className="col-4 text-center pt-3">
+                    <button className="btn btn-dark" onClick={() => history.goBack()}>Back</button>
+                </div>
+            </div>
+            <div className="row pb-5">
+                {player && <DisplayPlayer player={player}/>}
+            </div>
             <div className="row text-center">
                 <div className="col">
-                    <button className="button" onClick={() => compareClick()}>Compare</button>
+                    <button className="btn btn-dark" onClick={() => compareClick()}>Compare</button>
                 </div>
                 <div className="col">
-                    <button className="button" onClick={handleOpenModal}>Chat</button>
+                    <button className="btn btn-dark" onClick={handleOpenModal}>Chat</button>
                 </div>
             </div>
 

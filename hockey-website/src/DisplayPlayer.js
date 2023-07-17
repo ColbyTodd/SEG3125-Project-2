@@ -15,6 +15,7 @@ const DisplayPlayer = (props) => {
                                 <th scope="col">Goals</th>
                                 <th scope="col">Assists</th>
                                 <th scope="col">Points</th>
+                                <th scope="col">Team</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -23,6 +24,7 @@ const DisplayPlayer = (props) => {
                                     <td>{player.Goals}</td>
                                     <td>{player.Assists}</td>
                                     <td>{player.Points}</td>
+                                    <td>{player.Team}</td>
                                 </tr>
                         </tbody>
                     </table>

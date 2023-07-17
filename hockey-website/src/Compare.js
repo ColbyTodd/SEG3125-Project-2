@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 import DisplayPlayer from './DisplayPlayer';
 
 const Compare = () => {
     const [playerTop, setPlayerTop] = useState(null);
     const [playerBot, setPlayerBot] = useState(null);
     const { names } = useParams();
+    let history = useHistory();
 
     useEffect(() => {
         console.log(names);
@@ -23,6 +25,7 @@ const Compare = () => {
 
     return (  
         <div>
+            <button className="btn btn-dark" onClick={() => history.goBack()}>Back</button>
             {playerTop && <DisplayPlayer player={playerTop} />}
             {playerBot && <DisplayPlayer player={playerBot} />}
         </div>

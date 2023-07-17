@@ -159,7 +159,7 @@ const Search = () => {
             </div>
             <div className="row">
                 <div className="col text-center pt-3">
-                    <button className="button" onClick={searchClick}>Search</button>
+                    <button className="btn btn-dark" onClick={searchClick}>Search</button>
                 </div>
             </div>
             <div className="row">
