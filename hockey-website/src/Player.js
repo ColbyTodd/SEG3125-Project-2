@@ -51,9 +51,20 @@ const Player = () => {
                         <button className="btn btn-dark" onClick={handleOpenModal}>Chat</button>
                     </div>
                 </div>
-
-                <Chatbox show={showModal} handleClose={handleCloseModal} name={name}/>
+                <div className="row text-center pt-5">
+                    <div className="col-3"></div>
+                    <div className="col-6">
+                    <h3>Upcoming Games</h3>    
+                        <ul className='list-group'>
+                            <li className="list-group-item">Friday, September 15 at 7:00pm EST</li>
+                            <li className="list-group-item">Sunday, September 17 at 8:00pm EST</li>
+                            <li className="list-group-item">Wednesday, September 20 at 10:00pm EST</li>
+                        </ul>
+                    </div>
+                    
+                </div>
             </div>
+            <Chatbox show={showModal} handleClose={handleCloseModal} name={name}/>
         </div>
     );
 }
