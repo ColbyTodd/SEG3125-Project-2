@@ -1,5 +1,6 @@
 const DisplayPlayer = (props) => {
     const player = props.player;
+    const teamImage = props.teamImage;
     return (
         <div className="container">
             <h1 className="text-center">{player.Name}</h1>

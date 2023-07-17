@@ -9,6 +9,7 @@ const Player = () => {
     const { name } = useParams();
     const history = useHistory();
     const [showModal, setShowModal] = useState(false);
+    const [teamImage, setTeamImage] = useState(null);
 
     const handleCloseModal = () => {
         setShowModal(false);
@@ -31,6 +32,14 @@ const Player = () => {
             .then((data) => {
                 setPlayer(data.filter((data) => data.Name === name)[0]);
             })
+
+        fetch("https://my-json-server.typicode.com/ColbyTodd/SEG3125-Project-2/Teams")
+            .then(res => {
+                return res.json()
+            })
+            .then((data) => {
+                setPlayer(data.filter((data) => data.Name === player.Team)[0].Image);
+            })
     }, []);
 
     return (
@@ -40,7 +49,7 @@ const Player = () => {
             </div>  
             <div className='container-sm'>
                 <div className="row pb-5">
-                    {player && <DisplayPlayer player={player}/>}
+                    {player && teamImage && <DisplayPlayer player={player} teamImage={teamImage}/>}
                 </div>
                 <div className="row text-center">
                     <div className="col">
