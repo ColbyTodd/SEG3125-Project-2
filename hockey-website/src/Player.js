@@ -33,26 +33,26 @@ const Player = () => {
             })
     }, []);
 
-    return (  
-        <div className='container-sm'>
-            <div className="row">
-                <div className="col-4 text-center pt-3">
+    return (
+        <div className="">
+            <div className="ps-5 pt-4">
                     <button className="btn btn-dark" onClick={() => history.goBack()}>Back</button>
+            </div>  
+            <div className='container-sm'>
+                <div className="row pb-5">
+                    {player && <DisplayPlayer player={player}/>}
                 </div>
-            </div>
-            <div className="row pb-5">
-                {player && <DisplayPlayer player={player}/>}
-            </div>
-            <div className="row text-center">
-                <div className="col">
-                    <button className="btn btn-dark" onClick={() => compareClick()}>Compare</button>
+                <div className="row text-center">
+                    <div className="col">
+                        <button className="btn btn-dark" onClick={() => compareClick()}>Compare</button>
+                    </div>
+                    <div className="col">
+                        <button className="btn btn-dark" onClick={handleOpenModal}>Chat</button>
+                    </div>
                 </div>
-                <div className="col">
-                    <button className="btn btn-dark" onClick={handleOpenModal}>Chat</button>
-                </div>
-            </div>
 
-            <Chatbox show={showModal} handleClose={handleCloseModal} name={name}/>
+                <Chatbox show={showModal} handleClose={handleCloseModal} name={name}/>
+            </div>
         </div>
     );
 }

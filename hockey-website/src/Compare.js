@@ -25,7 +25,9 @@ const Compare = () => {
 
     return (  
         <div>
-            <button className="btn btn-dark" onClick={() => history.goBack()}>Back</button>
+            <div className="ps-5 pt-4">
+                <button className="btn btn-dark" onClick={() => history.goBack()}>Back</button>
+            </div>
             {playerTop && <DisplayPlayer player={playerTop} />}
             {playerBot && <DisplayPlayer player={playerBot} />}
         </div>

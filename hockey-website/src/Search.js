@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import PlayerList from './PlayerList';
 import { useParams } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
 const Search = () => {
     const [players, setPlayers] = useState(null);
@@ -13,6 +14,7 @@ const Search = () => {
     const [div, setDiv] = useState('');
     const [teamSel, setTeam] = useState('');
     const [nationality, setNationality] = useState('');
+    let history = useHistory();
 
     const posChange = (event) => {
         setPos(event.target.value);
@@ -95,8 +97,12 @@ const Search = () => {
     }, []); 
 
     return (  
+        <div className="">
+        <div className="ps-5 pt-4">
+        <button className="btn btn-dark" onClick={() => history.goBack()}>Back</button>
+        </div>  
         <div className="container-sm">
-            <h1 className='text-center py-5'>Find a player</h1>
+            <h1 className='text-center pb-5'>Find a player</h1>
             <div className="row">
                 <div className="col">
                     <h4>Position</h4>
@@ -167,6 +173,7 @@ const Search = () => {
                 {filter && <PlayerList players={filter} compare={compare}/>}
             </div>
             
+        </div>
         </div>
     );
 }
