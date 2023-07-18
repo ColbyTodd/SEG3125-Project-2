@@ -77,13 +77,12 @@ const Search = () => {
             })
             .then((data) => {
                 if (compare){
-                    setPlayers(data.filter((data) => data.Name !== compare))
+                    setPlayers(data.filter((data) => data.Name !== compare));
+                    setFilter(data.filter((data) => data.Name !== compare));
                 } else{
                     setPlayers(data);
+                    setFilter(data);
                 }
-                setFilter(players);
-                console.log(players);
-                console.log(filter);
                 
             })
         
