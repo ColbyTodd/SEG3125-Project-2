@@ -14,6 +14,7 @@ const Search = () => {
     const [div, setDiv] = useState('');
     const [teamSel, setTeam] = useState('');
     const [nationality, setNationality] = useState('');
+    let divisions = ["---", "Metropolitan", "Atlantic", "Central", "Pacific"]
     let history = useHistory();
 
     const posChange = (event) => {
@@ -95,6 +96,12 @@ const Search = () => {
             })
     }, []); 
 
+    if (con === "Eastern"){
+        divisions = ["---", "Metropolitan", "Atlantic"]
+    } else  if (con === "Western"){
+        divisions = ["---", "Central", "Pacific"]
+    }
+
     return (  
         <div className="">
         <div className="ps-5 pt-4">
@@ -131,18 +138,16 @@ const Search = () => {
                 </div>
                 <div className="col">
                     <select className="form-select" value={con} onChange={conChange}>
-                    <option selected value=''>---</option>
+                        <option selected value=''>---</option>
                         <option value="Eastern">Eastern</option>
                         <option value="Western">Western</option>
                     </select>
                 </div>
                 <div className="col">
                     <select className="form-select" value={div} onChange={divChange}>
-                    <option selected value =''>---</option>
-                        <option value="Metropolitan">Metropolitan</option>
-                        <option value="Atlantic">Atlantic</option>
-                        <option value="Central">Central</option>
-                        <option value="Pacific">Pacific</option>
+                        {divisions.map((division) => (
+                            <option key={division}>{division}</option>
+                        ))}  
                     </select>
                 </div>
                 <div className="col">
@@ -155,7 +160,7 @@ const Search = () => {
                 </div>
                 <div className="col">
                     <select className="form-select" value={nationality} onChange={nationalityChange}>
-                    <option selected value=''>---</option>
+                        <option selected value=''>---</option>
                         {uniqueNationalities && uniqueNationalities.map((nationality) => (
                             <option key={nationality}>{nationality}</option>
                         ))}  
