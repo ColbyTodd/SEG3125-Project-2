@@ -28,7 +28,7 @@ const HomeFR = () => {
             <h1 className='text-center py-5'>Les Statistiques du Hockey.com</h1>
             <div className="container-sm">
                 <div className="row">
-                    <h3 className="text-center pb-2">Leaders du classement des points de la LNH</h3>
+                    <h2 className="text-center pb-2">Leaders du classement des points de la LNH</h2>
                 </div>
                 <div className="row bordered p-2">
                     <div className="col">
