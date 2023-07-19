@@ -80,6 +80,7 @@ const Search = () => {
                 if (compare){
                     setPlayers(data.filter((data) => data.Name !== compare));
                     setFilter(data.filter((data) => data.Name !== compare));
+                    document.getElementById("title").innerHTML = "Compare Players";
                 } else{
                     setPlayers(data);
                     setFilter(data);
@@ -108,7 +109,7 @@ const Search = () => {
         <button className="btn btn-dark" onClick={() => history.goBack()}>Back</button>
         </div>  
         <div className="container-sm">
-            <h1 className='text-center pb-5'>Find a player</h1>
+            <h1 className='text-center pb-5' id="title">Find a player</h1>
             <div className="row">
                 <div className="col">
                     <h4>Position</h4>

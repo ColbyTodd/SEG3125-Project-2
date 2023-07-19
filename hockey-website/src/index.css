@@ -33,7 +33,7 @@ code {
 
 footer {
   flex-shrink: 0;
-  height: 60px; /* Adjust the height as needed */
+  height: 80px; /* Adjust the height as needed */
 }
 
 .playerLink :hover{

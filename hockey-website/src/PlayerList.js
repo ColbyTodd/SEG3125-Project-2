@@ -40,7 +40,7 @@ const PlayerList = (props) => {
             {players.map((player, index) => (
                 <tbody key={index}>
                         <tr onClick={() => handleRowClick(player.Name)} className="playerLink">
-                            <th scope="row" aria-label={player.Name + ','}>{player.Name}</th>
+                            <th scope="row" aria-label={player.Name + ','}><u>{player.Name}</u></th>
                             <td aria-label={"Number" + player.Number + ','}>{player.Number}</td>
                             <td aria-label={posTrans(player.Position) + ','}>{player.Position}</td>
                             <td aria-label={player.Team + ','}>{player.Team}</td>
