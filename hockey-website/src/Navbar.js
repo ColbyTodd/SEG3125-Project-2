@@ -26,7 +26,7 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand navbar-dark bg-dark">
             <Link className="navbar-brand" to='/'>
-                <img src={process.env.PUBLIC_URL + '/logo-white.png'} width="30" height="30" className="d-inline-block ms-4" alt="logo"/>
+                <img src={process.env.PUBLIC_URL + '/logo-white.png'} width="30" height="30" className="d-inline-block ms-4" alt="crossed hockey sticks and puck logo"/>
             </Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>

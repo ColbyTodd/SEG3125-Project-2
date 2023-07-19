@@ -28,7 +28,7 @@ const Home = () => {
             <h1 className='text-center py-5'>The Hockey Stats.com</h1>
             <div className="container-sm">
                 <div className="row">
-                    <h3 className="text-center pb-2">NHL Point Leaders</h3>
+                    <h2 className="text-center pb-2">NHL Point Leaders</h2>
                 </div>
                 <div className="row bordered p-2">
                     <div className="col">

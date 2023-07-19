@@ -8,7 +8,7 @@ const Standings = (props) => {
                     <thead>
                             <tr>
                                 <th style={{width: '300px'}} scope="col">{teams[0].Division}</th>
-                                <th scope="col">GP</th>
+                                <th scope="col" alt="Games played">GP</th>
                                 <th scope="col">W</th>
                                 <th scope="col">L</th>
                                 <th scope="col">OTL</th>
