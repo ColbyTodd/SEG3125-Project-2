@@ -16,6 +16,7 @@ function App() {
           <div className="content">
             <Switch>
               <Route exact path={`/`} render={ (routerProps) => < Home routerProps={routerProps} />} />
+              <Route exact path={`/EN`} render={ (routerProps) => < Home routerProps={routerProps} />} />
               <Route exact path={`/FR`} render={ (routerProps) => < HomeFR routerProps={routerProps} />} />
               <Route exact path={`/search`} render={ (routerProps) => < Search routerProps={routerProps} />} />
               <Route path={`/search/:compare`} render={ (routerProps) => < Search routerProps={routerProps} />} />
