@@ -1,6 +1,19 @@
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const Navbar = () => {
+
+    const langChange = (event) => {
+        let location = window.location.href;
+        if(location.split('/').slice(-1)[0] === 'EN' || location.split('/').slice(-1)[0] === 'FR'){
+            location = location.slice(0, -2);
+        }
+        if(location.split('/').slice(-1)[0] === ''){
+            window.location = location + event.target.value;
+        }
+    }; 
+
+    
+
     return (
         <nav className="navbar navbar-expand navbar-dark bg-dark">
             <Link className="navbar-brand" to='/'>
@@ -17,7 +30,7 @@ const Navbar = () => {
                 
             </div>
             <div className="navbar-nav navbar-right me-4">
-                <select className="nav-item nav-link active" style={{ float: 'right' }}>
+                <select className="nav-item nav-link active" style={{ float: 'right' }} onChange={langChange}>
                         <option style={{color: "black"}} selected>EN</option>
                         <option style={{color: "black"}}>FR</option>
                 </select>

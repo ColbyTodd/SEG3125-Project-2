@@ -11,8 +11,6 @@ const Compare = () => {
     let history = useHistory();
 
     useEffect(() => {
-        console.log(names);
-        
         fetch("https://my-json-server.typicode.com/ColbyTodd/SEG3125-Project-2/Players")
             .then(res => {
                 return res.json()
