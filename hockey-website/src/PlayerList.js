@@ -5,6 +5,18 @@ const PlayerList = (props) => {
     const compare = props.compare;
     const history = useHistory();
 
+    const posTrans = (pos) => {
+        if(pos === "RW"){
+            return "Right wing";
+        } else if(pos === "C"){
+            return "Center";
+        } else if(pos ==="LW"){
+            return "Left Wing";
+        } else if(pos === "D"){
+            return "Defence";
+        }
+    }
+
   const handleRowClick = (rowId) => {
     // Programmatically navigate to the desired URL
     if (compare){
@@ -18,21 +30,21 @@ const PlayerList = (props) => {
         <table className="table">
             <thead>
                 <tr>
-                    <th style={{width: '300px'}}scope="col">Name</th>
-                    <th scope="col">#</th>
-                    <th scope="col">Position</th>
-                    <th scope="col">Team</th>
-                    <th scope="col">Points</th>
+                    <th style={{width: '300px'}}scope="col" aria-label="Name.">Name</th>
+                    <th scope="col" aria-label='Number.'>#</th>
+                    <th scope="col" aria-label='Position.'>Position</th>
+                    <th scope="col" aria-label='Team.'>Team</th>
+                    <th scope="col" aria-label='Points.'>Points</th>
                 </tr>
             </thead>
             {players.map((player, index) => (
                 <tbody key={index}>
                         <tr onClick={() => handleRowClick(player.Name)} className="playerLink">
-                            <th scope="row">{player.Name}</th>
-                            <td>{player.Number}</td>
-                            <td>{player.Position}</td>
-                            <td>{player.Team}</td>
-                            <td>{player.Points}</td>
+                            <th scope="row" aria-label={player.Name + ','}>{player.Name}</th>
+                            <td aria-label={"Number" + player.Number + ','}>{player.Number}</td>
+                            <td aria-label={posTrans(player.Position) + ','}>{player.Position}</td>
+                            <td aria-label={player.Team + ','}>{player.Team}</td>
+                            <td aria-label={player.Points + 'Points,'}>{player.Points}</td>
                         </tr>
                 </tbody>
             ))}  

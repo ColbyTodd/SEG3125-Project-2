@@ -16,13 +16,11 @@ const HotPlayers = () => {
             })
     }, []);
     return (  
-        <div>
-            <div className="container-sm">
-                <div className="col p-2">
-                    {players && <PlayerList players={players}/>}
-                </div>
+        <div className="container-sm">
+            <div className="col p-2">
+                {players && <PlayerList players={players}/>}
             </div>
-        </div> 
+        </div>
     );
 }
  
