@@ -18,12 +18,12 @@ const Standings = (props) => {
                     {teams.map((team, index) => (
                         <tbody key={index}>
                             <tr>
-                                <th scope="row" aria-label={index + 1 + "," + team.Name + ","}>{index + 1} {team.Name}</th>
-                                <td aria-label={team.GP + ","}>{team.GP}</td>
-                                <td aria-label={team.W + ","}>{team.W}</td>
-                                <td aria-label={team.L + ","}>{team.L}</td>
-                                <td aria-label={team.OTL + ","}>{team.OTL}</td>
-                                <td aria-label={team.PTS + ","}>{team.PTS}</td>
+                                <th scope="row" aria-label={index + 1 + "place," + team.Name + ","}>{index + 1} {team.Name}</th>
+                                <td aria-label={team.GP + "games played,"}>{team.GP}</td>
+                                <td aria-label={team.W + "wins,"}>{team.W}</td>
+                                <td aria-label={team.L + "losses,"}>{team.L}</td>
+                                <td aria-label={team.OTL + "overtime losses,"}>{team.OTL}</td>
+                                <td aria-label={team.PTS + "points,"}>{team.PTS}</td>
                             </tr>
                         </tbody>
                     ))}
