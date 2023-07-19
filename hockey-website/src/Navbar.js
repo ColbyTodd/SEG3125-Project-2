@@ -4,12 +4,21 @@ const Navbar = () => {
 
     const langChange = (event) => {
         let location = window.location.href;
-        if(location.split('/').slice(-1)[0] === 'EN' || location.split('/').slice(-1)[0] === 'FR'){
+        let lang = location.split('/').slice(-1)[0]
+        if(lang === 'EN' || lang === 'FR'){
             location = location.slice(0, -2);
+            if(lang === 'EN'){
+                document.getElementById("home").innerHTML = "Accueil"
+                document.getElementById("search").innerHTML = "Recherche"
+            } else if(lang === 'FR'){
+                document.getElementById("home").innerHTML = "Home"
+                document.getElementById("search").innerHTML = "Search"
+            }
         }
         if(location.split('/').slice(-1)[0] === ''){
             window.location = location + event.target.value;
         }
+        
     }; 
 
     
@@ -24,8 +33,8 @@ const Navbar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
-                    <Link className="nav-item nav-link active" to='/'>Home</Link>
-                    <Link className="nav-item nav-link active" to="/search">Search</Link>
+                    <Link className="nav-item nav-link active" to='/' id="home">Home</Link>
+                    <Link className="nav-item nav-link active" to="/search" id="search">Search</Link>
                 </div>
                 
             </div>
